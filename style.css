@@ -1,0 +1,180 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    direction: rtl;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+.store-name {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #f4f4f4;
+    text-align: left;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    color: #f4f4f4;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Main */
+main {
+    padding: 20px;
+}
+
+/* Intro Section */
+.intro {
+    background-color: #007BFF;
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.intro button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.intro button:hover {
+    background-color: #882121;
+}
+
+/* Services Section */
+.services ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.services ul li {
+    background-color: #343a40;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+    flex: 1 1 200px;
+}
+
+.services ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.services ul li a:hover {
+    color: #007BFF;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    /* Adjust Navigation */
+    .menu-toggle {
+        display: block;
+        color: white;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    /* Adjust Intro Section */
+    .intro {
+        padding: 30px;
+    }
+
+    .intro h1 {
+        font-size: 28px;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+
+    /* Adjust Services Section */
+    .services ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services ul li {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+}
